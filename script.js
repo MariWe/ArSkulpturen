@@ -22,37 +22,10 @@ var models = [
     {
         url: './assets/magnemite/scene1.gltf',
         scale: '0.3 0.3 0.3',
-        location: {
-                lat: 50.82211,
-                lng: 12.93981,
-        },
         info: 'Magnemite, Lv. 5, HP 10/10',
         rotation: '0 180 0',
     },
-    {
-        url: './assets/articuno/scene.gltf',
-        scale: '0.05 0.05 0.05',
-        rotation: '0 180 0',
-        info: 'Articuno, Lv. 80, HP 100/100',
-    },
-    {
-        url:'./assets/azeria/scene.gltf',
-        scale: '0.05 0.05 0.05',
-        rotation: '0 180 0',
-        info: 'Azeria, Confused, HP 100/100',
-    },
-       {
-        url:'./assets/jellyfish/scene.gltf',
-        scale: '0.3 0.3 0.3',
-        rotation: '0 180 0',
-        info: 'No water?!',
-    },
-      {
-        url:'./assets/trex/scene.gltf',
-        scale: '0.5 0.5 0.5',
-        rotation: '0 180 0',
-        info: 'ROOOAAAAR!',
-    },
+    
 ];
 
 var modelIndex = 0;
