@@ -11,8 +11,8 @@ function staticLoadPlaces() {
         {
             name: 'Pokèmon',
             location: {
-                    lat: 50.821950,
-                    lng: 12.939613,
+                    lat: 50.82208,
+                    lng: 12.93978,
             },
         },
     ];
@@ -20,12 +20,18 @@ function staticLoadPlaces() {
 
 var models = [
     {
-        url: './assets/magnemite/scene1.gltf',
-        scale: '0.3 0.3 0.3',
-        info: 'Magnemite, Lv. 5, HP 10/10',
-        rotation: '0 180 0',
+        url: './assets/Spielhaus/Skulptur.obj',
+        scale: '1 1 1',
+        rotation: '0 0 0',
     },
-    
+    {
+        url: './assets/Fisch/Skulptur.obj',
+        scale: '1 1 1',
+        rotation: '0 0 0',
+    },
+        
+        
+  
 ];
 
 var modelIndex = 0;
@@ -42,7 +48,7 @@ var setModel = function (model, entity) {
         entity.setAttribute('position', model.position);
     }
 
-    entity.setAttribute('gltf-model', model.url);
+    entity.setAttribute('obj-model', model.url);
 
     const div = document.querySelector('.instructions');
     div.innerText = model.info;
