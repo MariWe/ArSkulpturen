@@ -15,8 +15,11 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
+     <a-assets>
+    <a-asset-item id="jelly" src="/assets/jellyfish/scene.gltf"></a-asset-item>
+  </a-assets>
       <a-entity gps-entity-place="latitude: 50.82208; longitude: 12.93978" 
-                obj-model="obj: url(https://d2z6pp1b5cghw2.cloudfront.net/3f805b32-c95d-4109-b10f-308be54f718f/model.obj); mtl: url(https://d2z6pp1b5cghw2.cloudfront.net/3f805b32-c95d-4109-b10f-308be54f718f/model.mtl);"
+                gltf-model="#jelly"
                 position="0 1.5 -2 " 
                 rotation="0 90 0" 
                 scale="0.5 0.5 0.5">
