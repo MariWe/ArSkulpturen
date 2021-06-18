@@ -18,22 +18,22 @@
       stats
       vr-mode-ui="enabled: false"
       embedded
-      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;">
+      arjs="sourceType: webcam; videoTexture: true; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;">
      
       <a-entity id="fisch" 
                 obj-model=" obj: url(/ArSkulpturen/assets/Fisch/Skulptur.obj); mtl: url(/ArSkulpturen/assets/Fisch/Texturemap.mtl);" 
-                gps-enity-place="latitude: 50.821950; longitude:12.939613;"
+                gps-projected-enity-place="latitude: 50.821950; longitude:12.939613;"
                 scale="1 1 1"
                 rotation="0 0 0"
                 position="0 0 0"
                 >  
       </a-entity> 
       <a-camera id="camera" 
-                look-controls-enabled='true' 
+                look-controls-enabled='false' 
                 arjs-look-controls="smoothingFactor: 0.5;" 
-                gps-camera= " gpsMinDistance= 25; 
-                              minDistance= 1; 
-                              maxDistance=10;" 
+                gps-projected-camera= " gpsMinDistance: 25; 
+                              minDistance: 1; 
+                              maxDistance: 10;" 
                 rotation reader></a-camera>     
     </a-scene>
   
