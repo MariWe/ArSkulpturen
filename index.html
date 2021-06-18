@@ -1,21 +1,26 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>GeoAR.js demo</title>
-    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Skulpturen der Kunstsammlungen Chemnitz</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
 
-<script src="./script.js"></script>
-<body style='margin: 0; overflow: hidden;'>
+  <body style="margin: 0; overflow: hidden;">
     <a-scene
-       vr-mode-ui="enabled: false"
-		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        <a-camera gps-camera rotation-reader>
-		</a-camera>
-	</a-scene>
-</body>
+      stats
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;">
+       <a-camera look-controls-enabled='true' arjs-look-controls='smoothingFactor: 0.5' gpsMinDistance="15" 
+            minDistance="1" maxDistance="10" gps-camera rotation-reader></a-camera>
+      <a-entity obj-model=" obj: url(/ArSkulpturen/assets/Fisch/Skulptur.obj); mtl: url(/ArSkulpturen/assets/Fisch/Texturemap.mtl);" 
+                scale="1 1 1"
+                rotation="0 0 0"
+                position="0 0 0"
+                >  
+      </a-obj-model>        
+    </a-scene>
+  </body>
+</html>
