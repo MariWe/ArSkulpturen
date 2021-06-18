@@ -14,23 +14,27 @@
       stats
       vr-mode-ui="enabled: false"
       embedded
-      arjs="sourceType: webcam; debugUIEnabled: true;">
-      <a-camera id="camera" 
-                look-controls-enabled='true' 
-                look-controls orbit-controls="#fisch;"
-                arjs-look-controls="smoothingFactor: 0.5; 
-                gpsMinDistance= 25; 
-                minDistance= 1; 
-                maxDistance=10;" 
-                gps-camera rotation reader></a-camera>
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;">
+     
       <a-entity id="fisch" 
                 obj-model=" obj: url(/ArSkulpturen/assets/Fisch/Skulptur.obj); mtl: url(/ArSkulpturen/assets/Fisch/Texturemap.mtl);" 
-                gps-enity-place="latidude: 50.821950; longitude:12.939613;"
+                gps-enity-place="latitude: 50.821950; longitude:12.939613;"
                 scale="1 1 1"
                 rotation="0 0 0"
                 position="0 0 0"
                 >  
-      </a-obj-model>        
+      </a-entity> 
+      <a-camera id="camera" 
+                look-controls-enabled='true' 
+                arjs-look-controls="smoothingFactor: 0.5;" 
+                gps-camera= " gpsMinDistance= 25; 
+                              minDistance= 1; 
+                              maxDistance=10;" 
+                rotation reader></a-camera>     
     </a-scene>
+    <script>
+      const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
+      console.log(distanceMsg);
+    </script>
   </body>
 </html>
