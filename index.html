@@ -16,13 +16,13 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;">
       <a-camera id="camera" look-controls-enabled='true'  
-                arjs-look-controls='smoothingFactor: 0.5' gpsMinDistance="0.5" 
-                gps-camera=" minDistance: 0.5; maxDistance: 180;" rotation-reader>
+                arjs-look-controls='smoothingFactor: 0.5'  
+                gps-camera=" minDistance: 1; maxDistance: 10; gpsMinDistance: 1;" rotation-reader>
       </a-camera>
       <a-entity   id="fisch" 
                   geometry="primitive: sphere" 
                   material="color: crimson; metalness: 0.7" 
-                  gps-enity-place="latitude: 50.822219; longitude: 12.940023;"
+                  gps-enity-place="latitude: 50.82195; longitude: 12.93968;"
                   radius="1.5"
                   rotation="0 0 0"
                   position="0 0 0"
