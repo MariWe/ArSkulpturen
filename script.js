@@ -3,13 +3,17 @@ window.onload = () => {
     renderPlaces(places);
 };
 
-function staticLoadPlaces() {
+function getLocation(){
+    navigator.geolocation.getCurrentPosition(staticLoadPlaces);
+}
+
+function staticLoadPlaces(position) {
     return [
         {
             name: 'Elefant',
             location: {
-                    lat: 50.82208,
-                    lng: 12.93978,
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
             },
         },
     ];
@@ -17,11 +21,10 @@ function staticLoadPlaces() {
 
 var models = [
     {
-        objurl: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Fisch/Skulptur.obj',
-        mtlurl: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Fisch/Texturemap.mtl',
-        scale: '0.5 0.5 0.5',
+        url: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/elefant.gltf',
+        scale: '1 1 1',
         rotation: '0 180 0',
-        position: '0 0 0'
+        position: '0 0 5'
     },
 ];
 
