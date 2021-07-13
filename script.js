@@ -29,7 +29,7 @@ var models = [
         url: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pfeil.gltf',
         scale: '1 1 1',
         rotation: '0 0 0',
-        position: '0 0 5'
+        position: '0 0 -5'
     },
 ];
 
