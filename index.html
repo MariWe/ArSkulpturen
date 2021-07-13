@@ -16,11 +16,11 @@
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
     <a-camera gps-camera minDistance="1" maxDistance="50" alert="true" rotation-reader></a-camera>  
-      <a-obj-model 
-                   src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Fisch/Skulptur.obj" mtl="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Fisch/Texturemap.mtl"
-                   gps-entity-place="latitude: 50.822180599999996; longitude: 12.9399111;"
+      <a-enity 
+              gltf-model="url(https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/glb/Pony.glb)"   
+              gps-entity-place="latitude: 50.822180599999996; longitude: 12.9399111;"
                    >
-        </a-obj-model>
+        </a-gltf-model>
 </a-scene>
 </body>
 </html>
