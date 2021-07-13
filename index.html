@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Skulpturen der Kunstsammlungen Chemnitz</title>
+    <title>Pfeil Nav</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"> </script>
@@ -16,6 +16,11 @@
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
     <a-camera gps-camera minDistance="1" maxDistance="50" alert="true" rotation-reader></a-camera>
+
+    <a-entity id="arrow" gltf-model="url (https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pfeil.gltf)" 
+                scale="0.7 0.7 0.7"
+                >  
+      </a-entity>  
 </a-scene>
 </body>
 </html>
