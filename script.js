@@ -17,7 +17,8 @@ function staticLoadPlaces() {
 
 var models = [
     {
-        url: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/elefant.gltf',
+        objurl: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Fisch/Skulptur.obj',
+        mtlurl: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Fisch/Texturemap.mtl',
         scale: '0.5 0.5 0.5',
         rotation: '0 180 0',
         position: '0 0 0'
@@ -37,7 +38,7 @@ var setModel = function (model, entity) {
         entity.setAttribute('position', model.position);
     }
 
-    entity.setAttribute('gltf-model', model.url);
+    entity.setAttribute('obj-model', model.objurl, model.mtlurl);
 
 };
 
