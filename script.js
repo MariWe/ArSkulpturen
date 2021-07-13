@@ -10,7 +10,7 @@ function getLocation(){
 function staticLoadPlaces(position) {
     return [
         {
-            name: 'Elefant',
+            name: 'Pfeil',
             location: {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude,
@@ -21,9 +21,9 @@ function staticLoadPlaces(position) {
 
 var models = [
     {
-        url: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/elefant.gltf',
+        url: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pfeil.gltf',
         scale: '1 1 1',
-        rotation: '0 180 0',
+        rotation: '0 0 0',
         position: '0 0 5'
     },
 ];
