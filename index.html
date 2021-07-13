@@ -17,11 +17,13 @@
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
     <a-camera gps-camera minDistance="1" maxDistance="50" alert="true" rotation-reader></a-camera>
 
-   <a-gltf-model id="arrow" 
-                  src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pfeil.gltf" 
-                  scale="0.7 0.7 0.7"
+ <a-entity id="arrow" obj-model=" obj: url(https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Pfeil/arrow.obj); mtl: url(https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Pfeil/arrow.mtl);" 
+                scale="0.7 0.7 0.7"
+                rotation="0 90 0"
+                position="0 0 0"
+                look-at=[gps-camera]
                 >  
-      </a-gltf-model>   
+      </a-entity>    
 </a-scene>
 </body>
 </html>
