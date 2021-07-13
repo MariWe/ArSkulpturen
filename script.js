@@ -12,7 +12,7 @@ function showPosition(position){
 }
 
 
-function staticLoadPlaces(position) {
+function staticLoadPlaces() {
     return [
         {
             name: 'Pfeil',
