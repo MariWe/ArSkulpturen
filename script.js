@@ -2,18 +2,23 @@ window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
-
+var lati, long;
 function getLocation(){
-    navigator.geolocation.getCurrentPosition(staticLoadPlaces);
+    navigator.geolocation.getCurrentPosition(showPosition);
 }
+function showPosition(position){
+    lati = position.coords.latitude;
+    long = position.coords.longitude;
+}
+
 
 function staticLoadPlaces(position) {
     return [
         {
             name: 'Pfeil',
             location: {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude,
+                    lat: lati,
+                    lng: long,
             },
         },
     ];
