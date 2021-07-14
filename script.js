@@ -1,39 +1,11 @@
 window.onload = () => {
-    let places = staticLoadPlaces();
-    console.log("We are into it!");
-    renderPlaces(places);
-};
+    var pf = document.querySelector('#pfeil');
+    const po = document.querySelector('#pony');
+    const ca = document.querySelector('#camera');
 
-function staticLoadPlaces() {
-   return [
-       {
-           name: 'Pony',
-           location: {
-               lat: 50.8221227,
-               lng: 12.9398857,
-           }
-       },
-   ];
-}
+    let oldPosition = ca.getAttribute('position');
+    let newPosition = {x: oldPosition.x, y: oldPosition.y, z: -4};
 
-function renderPlaces(places) {
-   let scene = document.querySelector('a-scene');
-
-   places.forEach((place) => {
-       let latitude = place.location.lat;
-       let longitude = place.location.lng;
-
-       let model = document.createElement('a-entity');
-       model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-       model.setAttribute('gltf-model', 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pony.glb');
-       model.setAttribute('rotation', '0 0 0');
-       model.setAttribute('scale', '1 1 1');
-
-       model.addEventListener('loaded', () => {
-           window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-           alert("I'm here!!!");
-       });
-
-       scene.appendChild(model);
-   });
+    pf.setAttribute('position', newPosition);
+    console.log(pf.getAttribute('position'));
 }
