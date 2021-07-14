@@ -2,67 +2,36 @@ window.onload = () => {
     let places = staticLoadPlaces();
     renderPlaces(places);
 };
-var lati, long;
-function getLocation(){
-    navigator.geolocation.getCurrentPosition(showPosition);
-}
-function showPosition(position){
-    lati = position.coords.latitude;
-    long = position.coords.longitude;
-}
-
 
 function staticLoadPlaces() {
-    return [
-        {
-            name: 'Pfeil',
-            location: {
-                    lat: lati,
-                    lng: long,
-            },
-        },
-    ];
+   return [
+       {
+           name: 'Pony',
+           location: {
+               lat: 50.8221227,
+               lng: 12.9398857,
+           }
+       },
+   ];
 }
 
-var models = [
-    {
-        url: 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Unbenannt.glb',
-        scale: '1 1 1',
-        rotation: '0 0 0',
-        position: '0 0 -5'
-    },
-];
-
-var setModel = function (model, entity) {
-    if (model.scale) {
-        entity.setAttribute('scale', model.scale);
-    }
-
-    if (model.rotation) {
-        entity.setAttribute('rotation', model.rotation);
-    }
-
-    if (model.position) {
-        entity.setAttribute('position', model.position);
-    }
-
-    entity.setAttribute('obj-model', model.objurl, model.mtlurl);
-
-};
-
 function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
+   let scene = document.querySelector('a-scene');
 
-    places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+   places.forEach((place) => {
+       let latitude = place.location.lat;
+       let longitude = place.location.lng;
 
-        let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+       let model = document.createElement('a-entity');
+       model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+       model.setAttribute('gltf-model', 'https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pony.glb');
+       model.setAttribute('rotation', '0 0 0');
+       model.setAttribute('scale', '1 1 1');
 
-            var entity = document.querySelector('[gps-entity-place]');    
-       
+       model.addEventListener('loaded', () => {
+           window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+       });
 
-        scene.appendChild(model);
-    });
+       scene.appendChild(model);
+   });
 }
