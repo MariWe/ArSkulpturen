@@ -3,6 +3,12 @@ window.onload = () => {
     const po = document.querySelector('#pony');
     const ca = document.querySelector('#camera');
 
+    console.log('Pfeil');
+    console.log(pf.getAttribute('position'));
+  
+    console.log("Kamera");
+    console.log(ca.getAttribute('position'));
+
     let oldPosition = ca.getAttribute('position');
     let newPosition = {x: oldPosition.x, y: oldPosition.y, z: -4};
 
