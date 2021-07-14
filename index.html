@@ -3,7 +3,6 @@
     <meta charset="utf-8" />
     <title>Pfeil Nav</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"> </script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/script.js"></script>
@@ -25,7 +24,7 @@
       >
 </a-gltf-model>
       
-      <a-camera gps-camera minDistance="1" maxDistance="20" alert="true" gpsMinDistance="2" rotation-reader></a-camera> 
+      <a-camera id="camera" gps-camera minDistance="1" maxDistance="20" alert="true" gpsMinDistance="2" rotation-reader></a-camera> 
 </a-scene>
 </body> 
   
