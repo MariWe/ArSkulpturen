@@ -1,15 +1,14 @@
 window.onload = () => {
-        setInterval(function() { 
-    var pf = document.querySelector('#pfeil');
-    const po = document.querySelector('#pony');
-    const ca = document.querySelector('#camera');
-
     function pfPosition(){
-        let oldPosition = ca.getAttribute('position');
+        let oldPosition = document.querySelector('#camera').getAttribute('position');
         let newPosition = {x: oldPosition.x, y: oldPosition.y, z: -4};
 
-        pf.setAttribute('position', newPosition);
-        console.log(pf.getAttribute('position'));
-        }  
-    }, 500);
+        document.querySelector('#pfeil').setAttribute('position', newPosition);
+        console.log(document.querySelector('#pfeil').getAttribute('position'));
+        }
+
+    setInterval(function() { 
+    pfPosition(); 
+}, 500);
+
 }
