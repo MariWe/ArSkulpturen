@@ -1,4 +1,5 @@
 window.onload = () => {
+        setInterval(function() { 
     var pf = document.querySelector('#pfeil');
     const po = document.querySelector('#pony');
     const ca = document.querySelector('#camera');
@@ -9,10 +10,6 @@ window.onload = () => {
 
         pf.setAttribute('position', newPosition);
         console.log(pf.getAttribute('position'));
-        }
-
-    setInterval(function() { 
-    pfPosition(); 
-}, 500);
-
+        }  
+    }, 500);
 }
