@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    alert("Hello World");
     const camera =  document.querySelector('[gps-camera]');
     const pony = document.querySelector('[gltf-model]');
     let check;
