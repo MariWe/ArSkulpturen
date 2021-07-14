@@ -3,19 +3,19 @@
     <meta charset="utf-8" />
     <title>Pfeil Nav</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-nft.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"> </script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="./scriptNew.js"></script>
+    <script src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/scriptNew.js"></script>
   </head>
     
   <body style='margin: 0; overflow: hidden;'>
-    <div class="centered instructions"></div>
     <a-scene 
         vr-mode-ui='enabled: false' 
         embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-       <a-entity gltf-model="url(https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pony.glb)"></a-entity>
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
+       <a-gltf-model src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pony.glb"></a-gltf-model>
       
       <a-camera gps-camera minDistance="1" maxDistance="20" alert="true" gpsMinDistance="2" rotation-reader></a-camera> 
 </a-scene>
