@@ -1,14 +1,10 @@
 window.onload = () => {
-    function pfPosition(){
-        let oldPosition = document.querySelector('#camera').getAttribute('position');
-        let newPosition = {x: oldPosition.x, y: oldPosition.y, z: -4};
-
-        document.querySelector('#pfeil').setAttribute('position', newPosition);
-        console.log(document.querySelector('#pfeil').getAttribute('position'));
+    function Rotation(){
+        document.querySelector('#pfeil').setAttribute('look-at', document.querySelector('#pony'));
+        console.log(document.querySelector('#pfeil').getAttribute('rotation'));
         }
 
     setInterval(function() { 
-    pfPosition(); 
+    Rotation(); 
 }, 500);
-
 }
