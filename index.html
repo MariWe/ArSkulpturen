@@ -13,27 +13,25 @@
         vr-mode-ui='enabled: false' 
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-      <a-gltf-model src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pony.glb"
-      gps-enity-place="latitude: 50.823385; longitude: 12.937760;"
-      scale="1 1 1"
-      position="0 -1 0" 
-      id="pony"
-      >
-</a-gltf-model>
       
-      <a-camera look-controls-enabled="false" 
+      <!--Camera + Arrow-->
+      <a-camera look-controls-enabled="true" 
                 arjs-look-controls="smoothingFactor: 0.1" 
                 id="camera" 
                 position="0 -1 0"
-                gps-camera=" minDistance: 1; maxDistance: 2;  gpsMinDistance: 5;"
+                gps-camera=" minDistance: 1; maxDistance: 10;  gpsMinDistance: 5;"
                 rotation-reader>
         <a-gltf-model id="pfeil"
         src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Unbenannt.glb"
         scale="1 1 1"
-        position="0 0 -5 "  
-        >
-</a-gltf-model>
+        position="0 0 -4 ">
+        </a-gltf-model>
       </a-camera> 
+      <!--Pony-->
+      <a-gltf-model src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/pony.glb"
+      gps-enity-place="latitude: 50.823385; longitude: 12.937760;"
+      scale="1 1 1"
+      id="pony"></a-gltf-model>
 </a-scene>
 </body> 
 </html> 
