@@ -8,15 +8,6 @@
     <script src="./script.js"></script>
   </head> 
   <body style='margin: 0; overflow: hidden;'>
-      <script>
-      AFRAME.registerComponent('locationfinder',{
-        init: function(){
-          navigator.geolocation.getCurrentPosition(function(location){
-            console.log(location);
-          });
-        }
-      });
-    </script>
     <a-scene 
         id="szene"
         vr-mode-ui='enabled: false' 
@@ -30,11 +21,11 @@
       >
 </a-gltf-model>
       
-      <a-camera locationfinder
-                look-controls-enabled="false" 
+      <a-camera look-controls-enabled="false" 
                 arjs-look-controls="smoothingFactor: 0.1" 
                 id="camera" 
-                gps-camera=" minDistance: 1; maxDistance: 5;  gpsMinDistance: 5;"
+                position="0 -1 0"
+                gps-camera=" minDistance: 1; maxDistance: 2;  gpsMinDistance: 5;"
                 rotation-reader>
         <a-gltf-model id="pfeil"
         src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Unbenannt.glb"
