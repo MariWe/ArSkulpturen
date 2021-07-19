@@ -15,11 +15,11 @@
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
       
       <!--Camera + Arrow-->
-      <a-camera look-controls-enabled="true" 
+      <a-camera look-controls-enabled="false" 
                 arjs-look-controls="smoothingFactor: 0.1" 
                 id="camera" 
                 position="0 -1 0"
-                gps-camera="minDistance: 1; maxDistance: 3"
+                gps-camera='gpsMinDistance: 5; minDistance: 1; maxDistance: 3'
                 rotation-reader>
         <a-gltf-model id="pfeil"
         src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Unbenannt.glb"
